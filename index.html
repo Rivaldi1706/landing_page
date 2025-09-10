@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>เลือกสิ่งที่คุณต้องการดู</title>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+<style>
+  body {
+    margin: 0;
+    font-family: 'Poppins', sans-serif;
+    background: linear-gradient(-45deg, #330000, #660000, #990000, #330000);
+    background-size: 400% 400%;
+    animation: gradientBG 15s ease infinite;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    text-align: center;
+    overflow-x: hidden;
+    color: #fff;
+  }
+
+  header {
+    margin-top: 40px;
+  }
+
+  /* Neon rainbow effect header */
+  h1 {
+    font-size: 32px;
+    margin-bottom: 10px;
+    background: linear-gradient(90deg, #ff0055, #ffcc00, #00ffdd, #00ccff, #ff00ff);
+    background-size: 300% 300%;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation: neonRainbow 5s ease infinite, flicker 1.5s infinite alternate;
+    text-shadow:
+      0 0 5px #fff,
+      0 0 10px #fff,
+      0 0 20px #fff;
+  }
+
+  p {
+    font-size: 16px;
+    color: #ddd;
+    margin-bottom: 40px;
+    animation: fadeIn 2s ease forwards;
+  }
+
+  .button-container {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    width: 80%;
+    max-width: 320px;
+  }
+
+  .btn {
+    padding: 18px 25px;
+    font-size: 18px;
+    border: none;
+    border-radius: 12px;
+    cursor: pointer;
+    text-decoration: none;
+    color: #fff;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 600;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.3);
+    transition: transform 0.3s, box-shadow 0.3s, background 0.3s;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .btn::before {
+    content: '';
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    background: rgba(255,255,255,0.1);
+    transform: rotate(45deg);
+    transition: all 0.5s;
+  }
+
+  .btn:hover::before {
+    transform: rotate(0deg);
+    background: rgba(255,255,255,0.2);
+  }
+
+  .btn:hover {
+    transform: translateY(-6px) scale(1.05);
+    box-shadow: 0 12px 25px rgba(0,0,0,0.5);
+  }
+
+  .main-site { background: #cc0000; color: #fff; }
+  .main-site:hover { background: #ff3333; }
+
+  .livescore { background: #990000; color: #fff; }
+  .livescore:hover { background: #ff4444; }
+
+  .film { background: #660000; color: #fff; }
+  .film:hover { background: #ff5555; }
+
+  .contact { background: #00c300; color: #fff; }
+  .contact:hover { background: #33ff33; }
+
+  .btn img {
+    width: 24px;
+    height: 24px;
+    margin-right: 10px;
+  }
+
+  footer {
+    margin-top: 50px;
+    font-size: 12px;
+    color: #aaa;
+    animation: fadeIn 3s ease forwards;
+  }
+
+  /* Animations */
+  @keyframes gradientBG {
+    0%{background-position:0% 50%;}
+    50%{background-position:100% 50%;}
+    100%{background-position:0% 50%;}
+  }
+
+  @keyframes fadeIn {
+    0% { opacity: 0;}
+    100% { opacity: 1;}
+  }
+
+  @keyframes neonRainbow {
+    0% { background-position:0% 50%; }
+    50% { background-position:100% 50%; }
+    100% { background-position:0% 50%; }
+  }
+
+  @keyframes flicker {
+    0% { opacity:1; text-shadow: 0 0 5px #fff,0 0 10px #fff,0 0 20px #fff; }
+    20% { opacity:0.9; text-shadow: 0 0 2px #fff; }
+    40% { opacity:1; text-shadow: 0 0 5px #fff,0 0 10px #fff; }
+    60% { opacity:0.85; text-shadow: 0 0 1px #fff; }
+    80% { opacity:1; text-shadow: 0 0 5px #fff,0 0 15px #fff; }
+    100% { opacity:1; text-shadow: 0 0 5px #fff,0 0 10px #fff; }
+  }
+
+</style>
+</head>
+<body>
+
+<header>
+  <h1>เลือกสิ่งที่คุณต้องการดู 👇</h1>
+  <p>เนื้อหานี้เพื่อความบันเทิงเท่านั้น</p>
+</header>
+
+<div class="button-container">
+  <a href="https://union777th.it.com/th/register/?referral=U7T0249003" class="btn main-site">🌐 เว็บไซต์หลัก</a>
+  <a href="https://rotator.example.com/livescore" class="btn livescore">⚽ ผลบอลสด</a>
+  <a href="https://www.doohee.vip/" class="btn film">🎬 ดูหนังเต็มเรื่อง</a>
+  <a href="https://line.me/ti/p/@examplelineid" class="btn contact">
+    <img src="https://upload.wikimedia.org/wikipedia/commons/4/41/LINE_logo.svg" alt="LINE"> ติดต่อเรา
+  </a>
+</div>
+
+<footer>
+  © 2025 สำหรับความบันเทิงเท่านั้น
+</footer>
+
+</body>
+</html>
